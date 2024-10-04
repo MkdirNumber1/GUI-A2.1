@@ -1,0 +1,139 @@
+
+
+/* General Reset for Block Elements */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+
+/* Header Styles */
+header {
+	background: url(sunset.jpg) no-repeat center / cover; /* Sets background image, prevents repeat, centers it, and scales to cover */
+}
+
+
+/* Main Body Styles */
+body {
+	box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+	width: 80%; /* Sets the body width to 80% of the viewport */
+	min-width: 600px; /* Minimum width of the body is 600px to ensure readability on smaller screens */
+	margin: auto; /* Centers the body horizontally within the viewport */
+	background-image: url("ptrbackground.jpg"); /* Sets the background image */
+	background-color: #00569f; /* Fallback solid color in case the image doesn't load */
+	color: #666666; /* Text color for body text */
+	font-family: Arial, Helvetica, sans-serif; /* Sets the font family for the body text */
+}
+
+
+/* Wrapper for Content */
+#wrapper {
+	background-color: white; /* Keep white background for content area */
+	padding-bottom: 48px; /* Ensure footer is not overlapped */
+}
+
+
+/* Navigation Styles all in one clump */
+nav {
+	width: 250px; /* Fixed width for the navigation bar */
+	float: left;  /* Position the nav to the left */
+	height: calc(100vh - 100px); /* Set height to viewport height minus header/footer */
+	position: relative;
+}
+nav a {
+	text-decoration: none; /* Remove underlines from links */
+	color: black;         /* Default link color */
+}
+/* Color on hover */
+nav a:hover {
+	color: white;
+}
+nav a:visited {
+	color: black;
+}
+nav ul {
+	font-size: 1.2em; /* Sets the font size for list items to 1.2 times the base font size */
+	font-weight: bold; /* Makes the text bold for better visibility */
+	background-color: lightblue;
+	list-style-type: none; /* Removes bullet points from the list items */
+	padding: 30px;
+	margin: 0; /* Removes default margin to keep the list close to the top of the nav */
+	height: 90%; /* Sets the height of the list to 90% of its parent container */
+}
+
+
+
+
+/* Content Area */
+#content, footer {
+	/*margin-left: 260px; !* Space for the navigation bar *!*/
+	padding: 30px;      /* Reduced padding for content area */
+	box-sizing: border-box;
+	align-content: start;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Creates three equal columns */
+
+
+	gap: 10px; /* Space between grid items */
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*align-items: start;*/
+}
+
+#content ul {
+
+}
+
+
+img {
+	grid-column: 1; /* Position in column 1 */
+	grid-row: 2; /* Position in row 1 */
+}
+/*#contact {*/
+/*	grid-column: 2;*/
+/*	grid-row: 2;*/
+/*}*/
+
+h2 {
+	color: #3399CC;
+	text-align: start;
+	font-weight: bold;
+}
+
+
+/* Sets the size and alignments for everything inside "contact" */
+#contact {
+	font-size: 90%;
+	text-align: left;
+
+}
+
+
+/* Resort Name Style */
+.resort {
+	color: #3399CC;     /* Special coloring for resort name */
+}
+
+
+/* Headings Styles */
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+	color: white;
+}
+
+
+/* List Styles */
+#content ul {
+	list-style-image: url("marker.gif"); /* Custom bullet for lists */
+}
+
+
+/* Footer Styles */
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	text-align: center;
+	margin: 0; /* Reset margin to keep footer within the white box */
+}
+

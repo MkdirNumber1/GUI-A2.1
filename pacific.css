@@ -36,8 +36,9 @@ body {
 nav {
 	width: 250px; /* Fixed width for the navigation bar */
 	float: left;  /* Position the nav to the left */
-	height: calc(100vh - 100px); /* Set height to viewport height minus header/footer */
-	position: relative;
+	/*height: calc(100vh - 100px); !* Set height to viewport height minus header/footer *!*/
+	height: 610px;
+	overflow: auto;
 }
 nav a {
 	text-decoration: none; /* Remove underlines from links */
@@ -69,19 +70,14 @@ nav ul {
 	padding: 30px;      /* Reduced padding for content area */
 	box-sizing: border-box;
 	align-content: start;
+	margin: auto;
 
 	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* Creates three equal columns */
-
-
-	gap: 10px; /* Space between grid items */
-	/*display: flex;*/
-	/*flex-direction: column;*/
-	/*align-items: start;*/
-}
-
-#content ul {
-
+	grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+	grid-template-rows: auto auto 1fr; /* Three rows; adjust heights as needed */
+	gap: 0; /* Remove spacing between grid items */
+	height: auto; /* Adjust height based on content */
+	overflow: auto;
 }
 
 
@@ -89,10 +85,7 @@ img {
 	grid-column: 1; /* Position in column 1 */
 	grid-row: 2; /* Position in row 1 */
 }
-/*#contact {*/
-/*	grid-column: 2;*/
-/*	grid-row: 2;*/
-/*}*/
+
 
 h2 {
 	color: #3399CC;
@@ -132,8 +125,8 @@ h1 {
 /* Footer Styles */
 footer {
 	font-family: Georgia, "Times New Roman", serif;
-	font-style: italic;
-	text-align: center;
 	margin: 0; /* Reset margin to keep footer within the white box */
+	grid-column: 1; /* Position footer in the first column */
+	grid-row: 3; /* Position footer in the third row */
 }
 
